@@ -29,6 +29,17 @@ For portrait, we utilize a deep fusion scheme (Symbiotic Fusion) to ensure portr
 
 The overview of our method (a) and the illustration of our designed transformer block (b). For better illustration, we omit the timestep encoder and Layer Norm in (b). LetsTalk integrates transformer blocks equipped with both temporal and spatial attention modules, designed to capture intra-frame spatial details and establish temporal correspondence across time steps. After obtaining portrait and audio embeddings, Symbiotic Fusion is used for fusing the portrait embedding and Direct Fusion is for fusing the audio embedding. Notably, we repeat the portrait embedding along the frame axis to make it have the same shape as the noise embedding.
 
+<div align="center">
+<img width="800" alt="image" src="assets/schemes.png?raw=true">
+</div>
+
+Illustration of three multimodal fusion schemes, our transformer backbone is formed by the left-side blocks.
+
+(a) **Direct Fusion**. Directly feeding condition into each block's cross-attention module;
+
+(b) **Siamese Fusion**. Maintaining a similar transformer and feeding the condition into it, extracting the corresponding features to guide the features in the backbone;
+
+(c) **Symbiotic Fusion**. Concatenating modality with the input at the beginning, then feeding it into the backbone, achieving fusion via the inherent self-attention mechanisms.
 
 
 ## 📆 TODO
