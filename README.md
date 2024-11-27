@@ -3,7 +3,7 @@
 <h1> Latent Diffusion Transformer for Talking Video Synthesis </h1>
 
 <a href='https://zhang-haojie.github.io/project-pages/letstalk.html'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
-<a href=''><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
+<a href='https://arxiv.org/abs/2411.16748'><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
 
 </div>
 
@@ -61,5 +61,13 @@ Illustration of three multimodal fusion schemes, our transformer backbone is for
 If you find this project useful in your research, please consider cite:
 
 ```BibTeX
-
+@misc{zhang2024letstalklatentdiffusiontransformer,
+      title={LetsTalk: Latent Diffusion Transformer for Talking Video Synthesis}, 
+      author={Haojie Zhang and Zhihao Liang and Ruibo Fu and Zhengqi Wen and Xuefei Liu and Chenxing Li and Jianhua Tao and Yaling Liang},
+      year={2024},
+      eprint={2411.16748},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2411.16748}, 
+}
 ```
