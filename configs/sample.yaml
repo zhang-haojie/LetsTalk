@@ -1,0 +1,44 @@
+# dataset
+dataset: frame
+
+data_dir: /path/to/dataset/videos # s
+audio_dir: /path/to/dataset/audio
+pretrained_model_path: /path/to/checkpoints/latte
+
+# path:
+pretrained: 
+wav2vec: ./pretrained/wav2vec/wav2vec2-base-960h
+audio_separator: ./pretrained/audio_separator/Kim_Vocal_2.onnx
+save_video_path: ./sample_videos
+
+# model config: 
+model: VDT-B/2
+num_frames: 16
+initial_frames: 2
+clip_frames: 16
+frame_interval: 1
+image_size: 256
+in_channels: 4
+temp_comp_rate: 1
+fixed_spatial: False
+attention_bias: True
+learn_sigma: True
+extras: 1 # [1, 2] 1 unconditional generation, 2 class-conditional generation
+num_classes:
+use_seque: False
+audio_margin: 2
+audio_dim: 768
+audio_token: 32
+
+precision: bf16   # GPU Axx: bf16-mixed
+gradient_checkpointing: False
+
+# sample config:
+seed:
+sample_method: ddpm
+num_sampling_steps: 250
+cfg_scale: 1.0
+sample_rate: 16000
+fps: 25
+num_workers: 8
+per_proc_batch_size: 1
