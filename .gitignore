@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+pretrained*
+results*
+sample_videos*

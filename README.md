@@ -19,7 +19,7 @@
 </div>
 
 **Abstract:** Long-duration talking video synthesis faces enduring challenges in achieving high video quality, portrait and temporal consistency, and computational efficiency. As video length increases, issues such as visual degradation, identity inconsistency, temporal incoherence, and error accumulation become increasingly problematic, severely affecting the realism and reliability of the results.
-To address these challenges, we present LetsTalk, a diffusion transformer framework equipped with multimodal guidance and a novel memory bank mechanism, explicitly maintaining contextual continuity and enabling robust, high-quality, and efficient generation of long-duration talking videos. In particular, LetsTalk introduces a noise-regularized memory bank to alleviate error accumulation and sampling artifacts during extended video generation. To further improve efficiency and spatiotemporal consistency, LetsTalk employs a deep compression autoencoder and a spatiotemporal-aware transformer with linear attention for effective multimodal fusion. We systematically analyze three fusion schemes and show that combining deep (Symbiotic Fusion) for portrait features and shallow (Direct Fusion) for audio achieves superior visual realism and precise speech-driven motion, while preserving diversity of movements. Extensive experiments demonstrate that LetsTalk establishes new state-of-the-art in generation quality, producing temporally coherent and realistic talking videos with enhanced diversity and liveliness, and maintains remarkable efficiency with 8$\times$ fewer parameters than previous approaches.
+To address these challenges, we present LetsTalk, a diffusion transformer framework equipped with multimodal guidance and a novel memory bank mechanism, explicitly maintaining contextual continuity and enabling robust, high-quality, and efficient generation of long-duration talking videos. In particular, LetsTalk introduces a noise-regularized memory bank to alleviate error accumulation and sampling artifacts during extended video generation. To further improve efficiency and spatiotemporal consistency, LetsTalk employs a deep compression autoencoder and a spatiotemporal-aware transformer with linear attention for effective multimodal fusion. We systematically analyze three fusion schemes and show that combining deep (Symbiotic Fusion) for portrait features and shallow (Direct Fusion) for audio achieves superior visual realism and precise speech-driven motion, while preserving diversity of movements. Extensive experiments demonstrate that LetsTalk establishes new state-of-the-art in generation quality, producing temporally coherent and realistic talking videos with enhanced diversity and liveliness, and maintains remarkable efficiency with 8x fewer parameters than previous approaches.
 
 
 ## 🎁 Overview
@@ -44,9 +44,9 @@ Illustration of three multimodal fusion schemes, our transformer backbone is for
 
 (c) **Symbiotic Fusion**. Concatenating modality with the input at the beginning, then feeding it into the backbone, achieving fusion via the inherent self-attention mechanisms.
 
-
+<!-- 
 ## 📆 TODO
-- [ ] Release code (coming soon!!!)
+- [ ] Release code (coming soon!!!) -->
 
 <!-- ## Visualization
 
@@ -64,13 +64,10 @@ Illustration of three multimodal fusion schemes, our transformer backbone is for
 If you find this project useful in your research, please consider the citation:
 
 ```BibTeX
-@misc{zhang2024letstalklatentdiffusiontransformer,
-      title={LetsTalk: Latent Diffusion Transformer for Talking Video Synthesis}, 
-      author={Haojie Zhang and Zhihao Liang and Ruibo Fu and Bingyan Liu and Zhengqi Wen and Xuefei Liu and Jianhua Tao and Yaling Liang},
-      year={2024},
-      eprint={2411.16748},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2411.16748}, 
+@article{zhang2024efficient,
+  title={Efficient Long-duration Talking Video Synthesis with Linear Diffusion Transformer under Multimodal Guidance},
+  author={Zhang, Haojie and Liang, Zhihao and Fu, Ruibo and Liu, Bingyan and Wen, Zhengqi and Liu, Xuefei and Tao, Jianhua and Liang, Yaling},
+  journal={arXiv preprint arXiv:2411.16748},
+  year={2024}
 }
 ```
